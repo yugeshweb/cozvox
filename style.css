@@ -1,0 +1,159 @@
+/* Root Variables for Color Palette */
+:root {
+  --primary-color: #0073e6; /* Bright Blue */
+  --secondary-color: #00b300; /* Bright Green */
+  --accent-color: #ffcc00; /* Bright Yellow */
+  --background-color: #f4f4f4; /* Light Gray */
+  --card-background: #ffffff; /* White */
+  --text-color: #333333; /* Dark Gray */
+  --error-color: #ff4d4d; /* Red */
+}
+
+/* General Styles */
+body {
+  background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Styles */
+.loan-form {
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.loan-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field Styles */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+}
+
+input.valid {
+  border-color: var(--secondary-color);
+}
+
+input.invalid {
+  border-color: var(--error-color);
+}
+
+/* Floating Labels */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: 16px;
+  color: #aaa;
+  transition: all 0.2s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-background);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border: 4px solid rgba(0, 115, 230, 0.3);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message {
+  color : var(--secondary-color);
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loan-form {
+      padding: 20px;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  input {
+      font-size: 14px;
+  }
+}

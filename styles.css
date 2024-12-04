@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    overflow: hidden; /* Prevents scrolling of the body */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Full height of viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.form-page {
+    height: 100vh; /* Full height of viewport */
+    display: none; /* Hide all pages by default */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.form-page.active {
+    display: flex; /* Show active page */
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Other styles remain unchanged */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+button {
+    /* Existing styles... */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.form-page.active {
+    animation: fadeIn 0.5s forwards;
+}
+
+.form-page:not(.active) {
+    animation: fadeOut 0.5s forwards;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

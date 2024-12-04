@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Loan - QuickLoan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Loan Application</h1>
+        <p>Quick and easy personal loans without formal credit history</p>
+    </header>
+
+    <main>
+        <form id="personalLoanForm" class="loan-form">
+            <h2>Personal Information</h2>
+            
+            <!-- Basic Information -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="65" required>
+            </div>
+
+            <!-- Income Information -->
+            <h2>Financial Information</h2>
+            
+            <div class="form-group">
+                <label for="personal-income">Your Monthly Income (₹):</label>
+                <input type="number" id="personal-income" name="personal-income" required>
+            </div>
+
+            <div class="form-group">
+                <label for="family-members">Number of Family Members:</label>
+                <input type="number" id="family-members" name="family-members" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="total-family-income">Total Family Monthly Income (₹):</label>
+                <input type="number" id="total-family-income" name="total-family-income" required>
+            </div>
+
+            <!-- Employment Details -->
+            <div class="form-group">
+                <label for="employment-status">Employment Status:</label>
+                <select id="employment-status" name="employment-status" required>
+                    <option value="">Select Status</option>
+                    <option value="employed">Employed</option>
+                    <option value="self-employed">Self Employed</option>
+                    <option value="business">Business Owner</option>
+                    <option value="unemployed">Unemployed</option>
+                </select>
+            </div>
+
+            <!-- Financial Health -->
+            <div class="form-group">
+                <label for="monthly-expenses">Monthly Expenses (₹):</label>
+                <input type="number" id="monthly-expenses" name="monthly-expenses" required>
+            </div>
+
+            <div class="form-group">
+                <label for="savings">Total Savings (₹):</label>
+                <input type="number" id="savings" name="savings" required>
+            </div>
+
+            <!-- Loan History -->
+            <div class="form-group">
+                <label for="previous-loans">Do you have any previous loans?</label>
+                <select id="previous-loans" name="previous-loans" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div id="previous-loan-details" class="form-group" style="display: none;">
+                <label for="debt-ratio">Current Monthly EMI to Income Ratio:</label>
+                <input type="number" id="debt-ratio" name="debt-ratio" step="0.01" min="0" max="1">
+            </div>
+
+            <!-- Credit Information -->
+            <div class="form-group">
+                <label for="credit-score">Credit Score (if available):</label>
+                <input type="number" id="credit-score" name="credit-score" min="300" max="900">
+            </div>
+
+            <!-- Loan Request -->
+            <h2>Loan Details</h2>
+            
+            <div class="form-group">
+                <label for="loan-amount">Required Loan Amount (₹):</label>
+                <input type="number" id="loan-amount" name="loan-amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loan-purpose">Loan Purpose:</label>
+                <select id="loan-purpose" name="loan-purpose" required>
+                    <option value="">Select Purpose</option>
+                    <option value="medical">Medical Expenses</option>
+                    <option value="education">Education</option>
+                    <option value="business">Business</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="travel">Travel</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="loan-tenure">Loan Tenure (in months):</label>
+                <select id="loan-tenure" name="loan-tenure" required>
+                    <option value="12">12 months</option>
+                    <option value="24">24 months</option>
+                    <option value="36">36 months</option>
+                    <option value="48">48 months</option>
+                    <option value="60">60 months</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+            </div>
+
+            <button type="submit">Check Eligibility</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 QuickLoan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

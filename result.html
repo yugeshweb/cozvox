@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Result</title>
+</head>
+<body>
+
+    <h1>Loan Eligibility Result</h1>
+
+    <div id="eligibilityResult">
+        <!-- The result will be displayed here -->
+    </div>
+
+    <script>
+        // Retrieve the query parameter 'result' from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultMessage = urlParams.get('result');
+
+        // Display the result message
+        document.getElementById('eligibilityResult').textContent = resultMessage;
+    </script>
+
+</body>
+</html>

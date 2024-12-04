@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FFBA08, #e0e0e0);
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-color: #f5f5f5; }
+            50% { background-color: #e0e0e0; }
+            100% { background-color: #f5f5f5; }
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .create-account-box {
+            border: 2px solid #FFBA08; /* Updated Border Color */
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
+        }
+
+        .spinner {
+            display: none;
+            margin: 10px auto;
+        }
+
+        .btn {
+            background-color: #FFBA08; /* Primary Color */
+        }
+
+        .btn:hover {
+            background-color: #F48C06; /* Hover Color */
+        }
+
+        .red-text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2 class="center-align">Login</h2>
+        <form id="login-form">
+            <div class="input-field">
+                <input type="email" id="login-email" required>
+                <label for="login-email">Email ID</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="login-password" required>
+                <label for="login-password">Password</label>
+                <span class="helper-text" id="password-helper" data-error="Invalid password"></span>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Login</button>
+            <div class="spinner" id="loading-spinner">
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="center-align">Or</p>
+            <p class="center-align" id="show-create-account">Create Account</p>
+        </form>
+        <div id="error-message" class="red-text center-align"></div>
+    </div>
+
+    <div class="container create-account-box" id="create-account-container" style="display: none;">
+        <h2 class="center-align">Create Account</h2>
+        <form id="create-account-form">
+            <div class="input-field">
+                <input type="email" id="create-email" required>
+                <label for="create-email">Email ID</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="create-password" required>
+                <label for="create-password">Password</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="confirm-password" required>
+                <label for="confirm-password">Confirm Password</label>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Create Account</button>
+            <p class="center-align" id="show-login">Already have an account? Login</p>
+        </form>
+        <div id="create-error-message" class="red-text center-align"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="lscript.js"></script>
+</body>
+</html>

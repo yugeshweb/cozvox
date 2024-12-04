@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="admission-form">
+            <div class="form-page" id="page-1">
+                <h2>1. Had you got the admission in any institution?</h2>
+                <label><input type="radio" name="admission" value="yes" required> Yes</label>
+                <label><input type="radio" name="admission" value="no"> No</label>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-2">
+                <h2>2. In which institution you got the admission?</h2>
+                <input type="text" name="institution" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-3">
+                <h2>3. In which year you are in?</h2>
+                <select name="year" required>
+                    <option value="first">First</option>
+                    <option value="second">Second</option>
+                    <option value="third">Third</option>
+                    <option value="fourth">Fourth</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-4">
+                <h2>4(a). In which stream you belong?</h2>
+                <select name="stream" required>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Medical">Medical</option>
+                    <option value="Management">Management</option>
+                    <option value="Phd">PhD</option>
+                    <option value="Diploma">Diploma</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-5">
+                <h2>4(b). Which course you are pursuing?</h2>
+                <select name="course" required>
+                    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Biotechnology Engineering">Biotechnology Engineering</option>
+                    <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+                    <option value="Electrical and Instrumental Engineering">Electrical and Instrumental Engineering</option>
+                    <option value="Electrical and Telecommunication Engineering">Electrical and Telecommunication Engineering</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.COM">B.COM</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-6">
+                <h2>5. From which Quota you applied?</h2>
+                <select name="quota" required>
+                    <option value="Government Exam Quota">Government Exam Quota</option>
+                    <option value="Management Quota">Management Quota</option>
+                    <option value="Private Entrance Exam">Private Entrance Exam</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-7">
+                <h2>6. What is your total Family income?</h2>
+                <select name="income" required>
+                    <option value="0-10000">0-10000</option>
+                    <option value=" 10000-50000">10000-50000</option>
+                    <option value="50000-100000">50000-100000</option>
+                    <option value="100000-500000">100000-500000</option>
+                    <option value="500000-1000000">500000-1000000</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-8">
+                <h2>7. In which category you belong?</h2>
+                <select name="category" required>
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC/ST">SC/ST</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-9">
+                <h2>8. Do you come under any government schemes?</h2>
+                <label><input type="radio" name="government_scheme" value="yes" required> Yes</label>
+                <label><input type="radio" name="government_scheme" value="no"> No</label>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-10">
+                <h2>9. In which level of government scheme you belong?</h2>
+                <select name="scheme_level" required>
+                    <option value="Central Government">Central Government</option>
+                    <option value="State Government">State Government</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-11">
+                <h2>10. Had you ever granted any scholarship from the government?</h2>
+                <label><input type="radio" name="scholarship_granted" value="yes" required> Yes</label>
+                <label><input type="radio" name="scholarship_granted" value="no"> No</label>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-12">
+                <h2>11. In which basis you got the scholarship?</h2>
+                <select name="scholarship_basis" required>
+                    <option value="Merit based scholarship">Merit based scholarship</option>
+                    <option value="Need based scholarship">Need based scholarship</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-13">
+                <h2>12. Submit the document of the scholarship</h2>
+                <input type="file" name="scholarship_document" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-14">
+                <h2>13. Had you ever borrowed money from private lenders?</h2>
+                <label><input type="radio" name="borrowed_money" value="yes" required> Yes</label>
+                <label><input type="radio" name="borrowed_money" value="no"> No</label>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-15">
+                <h2>14. Do you have any records for the past 5 year loan agreements from private lenders?</h2>
+                <label><input type="radio" name="loan_records" value="yes" required> Yes</label>
+                <label><input type="radio" name="loan_records" value="no"> No</label>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class=" form-page" id="page-16">
+                <h2>15. Submit the document needed for the agreements from private lenders</h2>
+                <input type="file" name="loan_agreement_document" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-17">
+                <h2>16. Did you have any crowdfunding?</h2>
+                <label><input type="radio" name="crowdfunding" value="yes" required> Yes</label>
+                <label><input type="radio" name="crowdfunding" value="no"> No</label>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-18">
+                <h2>17. Submit any proof you have</h2>
+                <input type="file" name="crowdfunding_proof" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-19">
+                <h2>18. How much amount you want to lend from our bank?</h2>
+                <input type="number" name="loan_amount" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-20">
+                <h2>19. When will you repay the amount?</h2>
+                <select name="repayment_period" required>
+                    <option value="1 year">1 year</option>
+                    <option value="2 years">2 years</option>
+                    <option value="3 years">3 years</option>
+                    <option value="4 years">4 years</option>
+                    <option value="5 years">5 years</option>
+                </select>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+            <div class="form-page" id="page-21">
+                <h2>20. Write your full name</h2>
+                <input type="text" name="full_name" required>
+                <button type="button" class="prev">Previous</button>
+                <button type="button" class="next">Next</button>
+            </div>
+
+           
+    <script src="script1.js"></script>
+    
+</body>
+</html>
